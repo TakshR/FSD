@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style >
+
+    
+        #a{
+            width: 300px;
+            height: 300px;
+            /* border: 2px solid red; */
+             position: relative;
+             background-color: brown;
+
+            
+        }
+        #b{
+            width: 50px;
+            height: 50px;
+            background-color: lightgreen;
+            /* border: 1px solid rebeccapurple; */
+            border-radius: 100%;
+            animation-name: "tak1";
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            position: relative;
+            
+        }
+        #c{margin: 25%;
+            width: 150px;
+            height: 350px;
+            border-radius: 6%;
+            background-color: black;
+            position: relative;
+
+        }
+        #d{
+             width: 69px;
+            height: 69px;
+            border-radius: 100%;
+            background-color: red;
+             position: absolute;
+             top: 25px;
+             right:40px ;
+            opacity: 0.3;
+            animation-name: "red";
+            animation-duration: 8s;
+            animation-iteration-count: infinite;
+           
+        }
+          #e{
+             width: 69px;
+            height: 69px;
+            border-radius: 100%;
+            background-color: yellow;
+             position: absolute;
+             top: 125px;
+             right:40px ;
+            opacity: 0.3;
+              animation-name: "yellow";
+            animation-duration: 8s;
+            animation-iteration-count: infinite;
+            
+
+        }
+          #f{
+             width: 69px;
+            height: 69px;
+            border-radius: 100%;
+            background-color: green;
+             position: absolute;
+             top: 225px;
+             right:40px ;
+            opacity: 0.3;
+              animation-name: "green";
+            animation-duration: 8s;
+            animation-iteration-count: infinite;
+         
+
+        }
+        @keyframes tak1 {
+                        /* 0%{
+                        
+                background-color: yellow;
+            }
+            25%{
+                transform: translate(372px,27px) scale(1.5);
+                background-color: green;
+            }
+            50%{
+                transform: translate(348px,347px) scale(2);
+                background-color: blue;
+            }
+            75%{
+                transform: translate(77px,323px) scale(2.5);
+                background-color: maroon;
+            } */
+             0%{
+                top:0px;
+                left: 0px;
+                }
+            25%{
+                
+                top: 0px;
+                left: 250px;
+            }
+            50%{
+                top: 250px;    
+                left: 250px;
+            }
+            75%{
+                top: 250px;
+                left: 0px;
+            }
+            100%{
+                top: 0px;
+                left: 0px;
+            }
+        }
+        @keyframes red {
+         0%, 33% { opacity: 1; }
+         37%, 100% { opacity: 0.3; }
+            
+        }
+        @keyframes yellow {
+             0%, 33% { opacity: 0.3; }
+            34%, 66% { opacity: 1; }
+            67%, 100% { opacity: 0.3; }
+        }
+          @keyframes green {
+           0%, 66% { opacity: 0.3; }
+            67%, 100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div id="a">
+        <div id="b"></div>
+    </div>
+    <div id="c">
+        <div id="d"></div>
+        <div id="e"></div>
+        <div id="f"></div>
+    </div>
+</body>
+</html>

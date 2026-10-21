@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 25%;
+        }
+        body{
+            height:90vh ;
+            display: flex;
+            align-items: center;
+        }
+       
+        #a{
+            height: 200px;
+            width: 200px;
+            background-color: lightskyblue;
+            border: 5px dashed blue;
+            transition: all 7s;
+            transition-property: border 7s;
+        }
+        #a:hover{
+            background-color: lightgreen;
+            border: 5px dashed green;
+            border-radius: 50%;
+            transform: translateX(100px) scale(2) rotate(500deg);
+
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <div id="a"></div>
+        
+    </div>
+</body>
+</html>

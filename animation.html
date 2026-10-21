@@ -1,0 +1,82 @@
+<!-- 
+1. animation-name: "testing";
+2. animation-duration: 5s; 
+3. animation-iteration-count: infinite / number
+4. animation-timing-function: linear / ease / ease-in / ease-out /ease -in-out
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            /* margin: 25%; */
+        }
+        #a{
+            height: 200px;
+            width: 200px;
+            background-color: lightskyblue;
+            border: 2px solid blue;
+             animation-name: "testing";
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            position: relative;
+            animation-direction: forwards;
+        }
+        @keyframes testing{
+            from{
+                background-color: red;
+                border: 2px solid blue;
+                 /* transform: translateX(0px); */
+                 /* transform: scale(-1); */
+                 left: -400px;
+            }
+            to{
+                background-color: yellow;
+                border: 2px solid green;
+                 /* transform: translateX(500px); */
+                 /* transform: scale(200%); */
+                 left: 1900px;
+            }
+        }
+        #b{
+            margin: 25%;
+            height: 100px;
+            width: 100px;
+            border: 2px solid red;
+            background-color: yellow;
+            animation-name: "test1";
+            animation-duration: 7s;
+            animation-iteration-count: 4;
+        }
+        @keyframes test1 {
+            0%{
+                background-color: yellow;
+            }
+            25%{
+                transform: translateX(200%) scale(2);
+                background-color: green;
+            }
+            50%{
+                transform: translate(200%,200%) scale(3);
+                background-color: blue;
+            }
+            75%{
+                transform: translateY(200%) scale(4);
+                background-color: orange;
+            }
+                        /* 100%{
+                transform: translateY(-200%) scale(2);
+            } */
+
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="a"></div>
+    <div id="b"></div>
+</body>
+</html>

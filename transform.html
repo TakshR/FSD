@@ -1,0 +1,107 @@
+<!-- 
+1. transition-duration: ms/s
+2. transition-propperty: all / p1,p2...
+3. transition-delay: 2s;
+4.transition-timing-function: ease / ease-in / ease-out / linear / ease-in-out
+5. animation-iteration-count: infinite / number
+6. animation-direction: forwards;
+
+
+2nd : below it create a form .when cursor inside textbox it increses in size 3*times and bg olive , color yellow and uppercase in 5seconds. 
+when buton is hover its gate double in size , 10px rounded border and a blue color shadow on right.
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            height: 200px;
+            width: 200px;
+            background-color: purple;
+            color: white;
+            border: 2px solid olive;
+            text-align: center;
+            line-height: 200px;
+            margin: 30px;
+        }
+
+        #b1:hover {
+            /* transform: translateX(100px); */
+            /* transform: translateY(100px); */
+            transform: translate(200px, -100px);
+                        background-color: pink;
+
+        }
+
+        #b2:hover {
+
+            transform: scale(-2);
+            /*(-ve) */
+                        background-color: pink;
+
+        }
+
+        #b3:hover {
+            transform: rotate(-50deg);
+                        background-color: pink;
+
+        }
+
+        #b4:hover {
+            transform: skewY(-19deg);
+                        background-color: pink;
+            border: 5px solid brown;
+
+        }
+
+        #b5:hover {
+            transform: translateX(300px) scale(2) rotate(70deg) skewX(30deg);
+            background-color: pink;
+            font-size: 70px;
+            text-decoration: underline;
+            border: 5px solid brown;
+        }
+
+        #b5 {
+            transition-duration: 10s, 7s, 5s, 2s,3s;
+            transition-property: transform, background-color, font-size, text-decoration , border;
+            /* transition-delay: 2s; */
+            transition-timing-function: ease-in;
+        }
+
+        #b1 {
+            transition-duration: 5s;
+            transition-timing-function: ease-in;
+        }
+
+        #b2 {
+            transition-duration: 5s;
+            transition-timing-function: ease-out;
+        }
+
+        #b3 {
+            transition-duration: 5s;
+            transition-timing-function: ease-in-out;
+        }
+
+        #b4 {
+            transition-duration: 0.5s;
+            transition-timing-function: ease;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="b1">box-1</div>
+    <div id="b2">box-2</div>
+    <div id="b3">box-3</div>
+    <div id="b4">box-4</div>
+    <div id="b5">box-5</div>
+
+</body>
+
+</html>

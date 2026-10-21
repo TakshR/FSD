@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --p:purple
+        }
+        .g{
+            height: 200px;
+            width: 200px;
+            margin: 10px;
+            border: 2px solid green;
+            background-color: yellow;
+        }
+        #ag{ --b:blue;
+            width: 40px;
+            height: 40px;
+            border-radius: 70%;
+            border: 1px solid blue;
+            position: absolute;
+            top: 75px;
+            left: 75px;
+            background-image: repeating-conic-gradient(var(--b) 0deg,var(--b) 7.5deg,white 7.5deg,white 15deg);
+            animation-name: ac;
+            animation-iteration-count: infinite;
+            animation-duration: 24s;
+        }
+        @keyframes ac {
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+            
+        }
+        #lg{
+            /* background-image: linear-gradient(45deg,violet,indigo,blue,green,yellow,orange,red); */
+            /* background-image: linear-gradient(red ,yellow 20%,purple 30%);% apva hoy to accending order ma */
+            background-image: linear-gradient(orange,white,green);
+            position: relative;
+            
+        }
+        #rg{
+            width: 300px;
+            height: 300px;
+            background-image: radial-gradient(circle,yellow,var(--p),orange); /*if write circle so output like circle else eleps*/
+            
+        }
+        #cg{
+            background-image: conic-gradient(from 90deg,yellow,var(--p),aqua,yellow);
+        }
+        #cg1{
+            background-image: conic-gradient(red 0deg,red 90deg,green 90deg ,green 180deg , blue 180deg , blue 270deg, yellow 270deg , yellow 360deg);  
+            border-radius: 50%;
+             /* background-image: conic-gradient(red 90deg,green 180deg, blue 270deg , yellow 360deg); */
+             transition:all 5s;
+        }
+        #cg1:hover{
+            height: 250px;
+            width: 250px;
+            background-image: radial-gradient(red,green,blue,yellow);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="g" id="lg">
+        <div id="ag"></div>
+    </div>
+    <div class="g" id="rg"></div>
+    <div class="g" id="cg"></div>
+    <div class="g" id="cg1"></div>
+
+    
+</body>
+</html>
